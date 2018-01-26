@@ -1,0 +1,16 @@
+﻿@model IEnumerable<AppSpotr_Test.Models.CustomModel.TagsModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@foreach (var item in Model)
+{
+    <div style="margin:2px;" class="col-md-12">
+        @foreach (var i in item.EachRow)
+        {
+            <a class="label label-default" href="#@i.TagsName"><span>@i.TagsName</span></a>
+        }
+    </div>
+}
+
+
